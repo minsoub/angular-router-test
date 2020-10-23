@@ -21,6 +21,7 @@ pipeline {
             }
             post {
                 failure {
+                    echo "fail"
                    // httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: "{ text:\"${failBody}\" }", url: "https://chat.googleapis.com/v1/spaces/${roomid}/messages?key=${key}&token=${token}"
                 }
             }
