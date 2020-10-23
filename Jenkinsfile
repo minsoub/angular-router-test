@@ -30,7 +30,7 @@ pipeline {
                 pwd(); //Log current directory
                 withAWS(region:'ap-northeast-2',credentials:'s3-jms') {
                     awsIdentity();//Log AWS credentials
-                    s3Upload(bucket:"hist-design-guide-angular", workingDir:'dist/angular-router-test', includePathPattern:'**/*');
+                    s3Upload(bucket:"jms-angular-test", workingDir:'dist/angular-router-test', includePathPattern:'**/*');
                 }
             }
 			post {
